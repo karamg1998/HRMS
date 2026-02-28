@@ -12,7 +12,7 @@ function AddEmployeeModal({ close, refreshDashboard, refreshEmployees }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-     let resp = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/admin/employees/create`, form);
+     let resp = await axios.post(`http://16.171.174.44:3000/admin/employees/create`, form);
      if(resp.data.success)
      {
         toast.success(resp.data.msg);

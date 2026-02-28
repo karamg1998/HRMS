@@ -11,7 +11,7 @@ function EmployeeTable({ employees, reload, seondReload }) {
         if (!window.confirm("Are you sure you want to delete this employee?"))
             return;
         try {
-            let del = await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/admin/employees/delete/${id}`);
+            let del = await axios.delete(`http://16.171.174.44:3000/admin/employees/delete/${id}`);
             if (del.data.success) {
                 toast.success(del.data.msg);
                 reload();
@@ -29,7 +29,7 @@ function EmployeeTable({ employees, reload, seondReload }) {
 
     const markAttendance = async (id, status) => {
         try {
-            let mark = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/admin/attendance`, {
+            let mark = await axios.post(`http://16.171.174.44:3000/admin/attendance`, {
                 employeeId: id,
                 attendance_date: today,
                 status: status

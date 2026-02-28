@@ -13,7 +13,7 @@ function Home() {
 
     const fetchEmployees = async () => {
         try {
-            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/admin/employees/get`);
+            const res = await axios.get(`http://16.171.174.44:3000/admin/employees/get`);
             if (res.data.success) {
                 setEmployees(res.data.data);
             }
@@ -29,7 +29,7 @@ function Home() {
 
     const fetchDashboard = async () => {
         try {
-            const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/admin/dashboard`);
+            const res = await axios.get(`http://16.171.174.44:3000/admin/dashboard`);
             if (res.data.success) {
                 setDashboardData(res.data.data);
             }

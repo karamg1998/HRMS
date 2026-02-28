@@ -21,7 +21,7 @@ function Details() {
       setLoading(true);
 
       const res = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/admin/attendance/get/${id}`
+        `http://16.171.174.44:3000/admin/attendance/get/${id}`
       );
 
       if (res.data.success) {
@@ -54,7 +54,7 @@ function Details() {
       setFilterLoading(true);
 
       const res = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/admin/filter/date/${id}?from=${from}&to=${to}`
+        `http://16.171.174.44:3000/admin/filter/date/${id}?from=${from}&to=${to}`
       );
  
       if (res.data.success) {
