@@ -3,9 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import Home from "./pages/Home";
 import "./App.css";
 import Details from "./pages/Details";
-import NotFound from "./pages/NotFOund";
-
-
+import Nf from "./pages/Nf";
 
 function App() {
   return (
@@ -14,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/details/:id" element={<Details />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Nf />} />
         </Routes>
       </Router>
       <Toaster
