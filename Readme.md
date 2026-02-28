@@ -128,7 +128,18 @@ VITE_API_BASE_URL= your api base url
 How to Run the Application Locally
 
 ## Clone the Repository
+git clone <repository_url>
+cd HRMS
 
-run this "npm install-all" inside root folder "HRMS"
-run this "npm run dev" to start both backend and frontend application
+For backend
+cd Backend
+run "npm i"
+run "npm run dev"
+Server will start at localhost:3000
+
+for Frontend 
+cd Frontend
+run "npm i"
+run "npm run dev"
+Server will start at localhost:5173
 
