@@ -37,6 +37,7 @@ function EmployeeTable({ employees, reload, seondReload }) {
             if (mark.data.success) {
                 toast.success(mark.data.msg);
                 reload();
+                seondReload();
             }
             else {
                 toast.error(mark.data.msg);
